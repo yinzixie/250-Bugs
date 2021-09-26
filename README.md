@@ -4,7 +4,7 @@
 # Bugs
 
 ## 2021.5.28
-语言：React 17
+语言/框架：React 17
 
 详情：点击a链接跳转到目的地后，后又跳回来了
 
@@ -17,7 +17,7 @@
   ```
 
 ## 2021.6.15
-语言：Typescript
+语言/框架：Typescript
 
 详情：if 语句一直返回True
 
@@ -29,3 +29,16 @@
    if(a == Type.Type1 || Type.Type2) return
   ```
 
+## 2021.9.26
+语言/框架：Jest
+
+详情：render 中写组件就报错
+
+原因：文件名 test.tsx 创建成了 test.ts 导致不支持 tsx 语法
+
+伪代码：
+
+  ```
+   import renderer from 'react-test-renderer'
+   renderer.create(<Message />) //报错
+  ```
